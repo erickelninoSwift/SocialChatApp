@@ -13,6 +13,8 @@
 		941193EC28E6FFA900B78D74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 941193EA28E6FFA900B78D74 /* Main.storyboard */; };
 		941193EE28E6FFB100B78D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 941193ED28E6FFB100B78D74 /* Assets.xcassets */; };
 		941193F128E6FFB100B78D74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 941193EF28E6FFB100B78D74 /* LaunchScreen.storyboard */; };
+		9429B99C29039BB60042AC79 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B99B29039BB50042AC79 /* Extensions.swift */; };
+		9429B99E29039E4C0042AC79 /* ConversationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B99D29039E4C0042AC79 /* ConversationController.swift */; };
 		94334DA528E73742004487E7 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94334DA428E73742004487E7 /* HomeController.swift */; };
 		94334DA728E73ADC004487E7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94334DA628E73ADC004487E7 /* Extension.swift */; };
 		94373E4028E731DD00F6D3DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94373E3F28E731DD00F6D3DE /* GoogleService-Info.plist */; };
@@ -28,6 +30,8 @@
 		941193ED28E6FFB100B78D74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		941193F028E6FFB100B78D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		941193F228E6FFB100B78D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9429B99B29039BB50042AC79 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../../../../Downloads/Extensions.swift; sourceTree = "<group>"; };
+		9429B99D29039E4C0042AC79 /* ConversationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationController.swift; sourceTree = "<group>"; };
 		94334DA428E73742004487E7 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		94334DA628E73ADC004487E7 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		94373E3F28E731DD00F6D3DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				94334DA428E73742004487E7 /* HomeController.swift */,
+				9429B99D29039E4C0042AC79 /* ConversationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				94334DA628E73ADC004487E7 /* Extension.swift */,
+				9429B99B29039BB50042AC79 /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -257,9 +263,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				94334DA728E73ADC004487E7 /* Extension.swift in Sources */,
+				9429B99C29039BB60042AC79 /* Extensions.swift in Sources */,
 				94334DA528E73742004487E7 /* HomeController.swift in Sources */,
 				941193E928E6FFA900B78D74 /* ViewController.swift in Sources */,
 				941193E528E6FFA900B78D74 /* AppDelegate.swift in Sources */,
+				9429B99E29039E4C0042AC79 /* ConversationController.swift in Sources */,
 				941193E728E6FFA900B78D74 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

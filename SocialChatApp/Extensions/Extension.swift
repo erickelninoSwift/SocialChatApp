@@ -11,7 +11,7 @@ import UIKit
 
 extension UIViewController
 {
-     func configurationUI()
+    func configurationUI()
     {
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
@@ -20,6 +20,28 @@ extension UIViewController
         layerGradient.locations = [0,1]
         view.layer.addSublayer(layerGradient)
         layerGradient.frame = view.frame
+    }
+    
+    func configurationHeaderTitleView(title: String , mybackgroundColor: UIColor)
+    {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.largeTitleTextAttributes = [.foregroundColor:UIColor.white]
+        appearance.backgroundColor = mybackgroundColor
+        
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.compactAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = title
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.isTranslucent = true
+        
+        
+        navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
+        view.backgroundColor = .white
+        
     }
     
 }
