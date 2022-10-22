@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		941193E528E6FFA900B78D74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941193E428E6FFA900B78D74 /* AppDelegate.swift */; };
+		941193E728E6FFA900B78D74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941193E628E6FFA900B78D74 /* SceneDelegate.swift */; };
+		941193E928E6FFA900B78D74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941193E828E6FFA900B78D74 /* ViewController.swift */; };
+		941193EC28E6FFA900B78D74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 941193EA28E6FFA900B78D74 /* Main.storyboard */; };
+		941193EE28E6FFB100B78D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 941193ED28E6FFB100B78D74 /* Assets.xcassets */; };
+		941193F128E6FFB100B78D74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 941193EF28E6FFB100B78D74 /* LaunchScreen.storyboard */; };
+		94334DA528E73742004487E7 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94334DA428E73742004487E7 /* HomeController.swift */; };
+		94334DA728E73ADC004487E7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94334DA628E73ADC004487E7 /* Extension.swift */; };
+		94373E4028E731DD00F6D3DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94373E3F28E731DD00F6D3DE /* GoogleService-Info.plist */; };
+		FD91C4BBFFAF53F82865FAB2 /* Pods_SocialChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D197BEF333866D66FE9678 /* Pods_SocialChatApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		941193E128E6FFA900B78D74 /* SocialChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		941193E428E6FFA900B78D74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		941193E628E6FFA900B78D74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		941193E828E6FFA900B78D74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		941193EB28E6FFA900B78D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		941193ED28E6FFB100B78D74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		941193F028E6FFB100B78D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		941193F228E6FFB100B78D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94334DA428E73742004487E7 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		94334DA628E73ADC004487E7 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		94373E3F28E731DD00F6D3DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A3D6B59BF269BF0131FAE043 /* Pods-SocialChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChatApp.debug.xcconfig"; path = "Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B4AE0E9D102CB1C87BBA8519 /* Pods-SocialChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChatApp.release.xcconfig"; path = "Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp.release.xcconfig"; sourceTree = "<group>"; };
+		D9D197BEF333866D66FE9678 /* Pods_SocialChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		941193DE28E6FFA900B78D74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD91C4BBFFAF53F82865FAB2 /* Pods_SocialChatApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BEBE602B30F2F141A647BD0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3D6B59BF269BF0131FAE043 /* Pods-SocialChatApp.debug.xcconfig */,
+				B4AE0E9D102CB1C87BBA8519 /* Pods-SocialChatApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		65CE8B4CE65543D3CF5478CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9D197BEF333866D66FE9678 /* Pods_SocialChatApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		941193D828E6FFA900B78D74 = {
+			isa = PBXGroup;
+			children = (
+				941193E328E6FFA900B78D74 /* SocialChatApp */,
+				941193E228E6FFA900B78D74 /* Products */,
+				0BEBE602B30F2F141A647BD0 /* Pods */,
+				65CE8B4CE65543D3CF5478CE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		941193E228E6FFA900B78D74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				941193E128E6FFA900B78D74 /* SocialChatApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		941193E328E6FFA900B78D74 /* SocialChatApp */ = {
+			isa = PBXGroup;
+			children = (
+				94334DA328E736D3004487E7 /* Extensions */,
+				94334DA228E736CD004487E7 /* API */,
+				94334DA128E736C0004487E7 /* Model */,
+				94334DA028E736B9004487E7 /* View */,
+				94334D9F28E736B0004487E7 /* Controller */,
+				941193E428E6FFA900B78D74 /* AppDelegate.swift */,
+				941193E628E6FFA900B78D74 /* SceneDelegate.swift */,
+				941193E828E6FFA900B78D74 /* ViewController.swift */,
+				941193EA28E6FFA900B78D74 /* Main.storyboard */,
+				941193ED28E6FFB100B78D74 /* Assets.xcassets */,
+				941193EF28E6FFB100B78D74 /* LaunchScreen.storyboard */,
+				94373E3F28E731DD00F6D3DE /* GoogleService-Info.plist */,
+				941193F228E6FFB100B78D74 /* Info.plist */,
+			);
+			path = SocialChatApp;
+			sourceTree = "<group>";
+		};
+		94334D9F28E736B0004487E7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				94334DA428E73742004487E7 /* HomeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		94334DA028E736B9004487E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94334DA128E736C0004487E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		94334DA228E736CD004487E7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		94334DA328E736D3004487E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				94334DA628E73ADC004487E7 /* Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		941193E028E6FFA900B78D74 /* SocialChatApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 941193F528E6FFB100B78D74 /* Build configuration list for PBXNativeTarget "SocialChatApp" */;
+			buildPhases = (
+				C80E698EEBE67D0B419FAE6E /* [CP] Check Pods Manifest.lock */,
+				941193DD28E6FFA900B78D74 /* Sources */,
+				941193DE28E6FFA900B78D74 /* Frameworks */,
+				941193DF28E6FFA900B78D74 /* Resources */,
+				3E3498DD1A29D9C957D3F227 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocialChatApp;
+			productName = SocialChatApp;
+			productReference = 941193E128E6FFA900B78D74 /* SocialChatApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		941193D928E6FFA900B78D74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Erick El nino";
+				TargetAttributes = {
+					941193E028E6FFA900B78D74 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 941193DC28E6FFA900B78D74 /* Build configuration list for PBXProject "SocialChatApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 941193D828E6FFA900B78D74;
+			productRefGroup = 941193E228E6FFA900B78D74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				941193E028E6FFA900B78D74 /* SocialChatApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		941193DF28E6FFA900B78D74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				941193F128E6FFB100B78D74 /* LaunchScreen.storyboard in Resources */,
+				94373E4028E731DD00F6D3DE /* GoogleService-Info.plist in Resources */,
+				941193EE28E6FFB100B78D74 /* Assets.xcassets in Resources */,
+				941193EC28E6FFA900B78D74 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E3498DD1A29D9C957D3F227 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C80E698EEBE67D0B419FAE6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SocialChatApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		941193DD28E6FFA900B78D74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94334DA728E73ADC004487E7 /* Extension.swift in Sources */,
+				94334DA528E73742004487E7 /* HomeController.swift in Sources */,
+				941193E928E6FFA900B78D74 /* ViewController.swift in Sources */,
+				941193E528E6FFA900B78D74 /* AppDelegate.swift in Sources */,
+				941193E728E6FFA900B78D74 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		941193EA28E6FFA900B78D74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				941193EB28E6FFA900B78D74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		941193EF28E6FFB100B78D74 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				941193F028E6FFB100B78D74 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		941193F328E6FFB100B78D74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		941193F428E6FFB100B78D74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		941193F628E6FFB100B78D74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3D6B59BF269BF0131FAE043 /* Pods-SocialChatApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X3L2CCTW7K;
+				INFOPLIST_FILE = SocialChatApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zando.SocialChatApp.SocialChatApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		941193F728E6FFB100B78D74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4AE0E9D102CB1C87BBA8519 /* Pods-SocialChatApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X3L2CCTW7K;
+				INFOPLIST_FILE = SocialChatApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zando.SocialChatApp.SocialChatApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		941193DC28E6FFA900B78D74 /* Build configuration list for PBXProject "SocialChatApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				941193F328E6FFB100B78D74 /* Debug */,
+				941193F428E6FFB100B78D74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		941193F528E6FFB100B78D74 /* Build configuration list for PBXNativeTarget "SocialChatApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				941193F628E6FFB100B78D74 /* Debug */,
+				941193F728E6FFB100B78D74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 941193D928E6FFA900B78D74 /* Project object */;
+}
