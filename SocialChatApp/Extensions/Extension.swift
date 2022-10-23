@@ -13,6 +13,7 @@ extension UIViewController
 {
     func configurationUI()
     {
+        navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
         let layerGradient = CAGradientLayer()

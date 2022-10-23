@@ -18,6 +18,8 @@
 		94334DA528E73742004487E7 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94334DA428E73742004487E7 /* HomeController.swift */; };
 		94334DA728E73ADC004487E7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94334DA628E73ADC004487E7 /* Extension.swift */; };
 		94373E4028E731DD00F6D3DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94373E3F28E731DD00F6D3DE /* GoogleService-Info.plist */; };
+		943A9EAC29049E2D008196BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943A9EAB29049E2D008196BB /* LoginViewController.swift */; };
+		94630372290559C90013319F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94630371290559C90013319F /* RegistrationViewController.swift */; };
 		FD91C4BBFFAF53F82865FAB2 /* Pods_SocialChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D197BEF333866D66FE9678 /* Pods_SocialChatApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		94334DA428E73742004487E7 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		94334DA628E73ADC004487E7 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		94373E3F28E731DD00F6D3DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		943A9EAB29049E2D008196BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		94630371290559C90013319F /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		A3D6B59BF269BF0131FAE043 /* Pods-SocialChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChatApp.debug.xcconfig"; path = "Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B4AE0E9D102CB1C87BBA8519 /* Pods-SocialChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChatApp.release.xcconfig"; path = "Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		D9D197BEF333866D66FE9678 /* Pods_SocialChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +114,7 @@
 		94334D9F28E736B0004487E7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				94630370290559990013319F /* Authentication */,
 				94334DA428E73742004487E7 /* HomeController.swift */,
 				9429B99D29039E4C0042AC79 /* ConversationController.swift */,
 			);
@@ -144,6 +149,15 @@
 				9429B99B29039BB50042AC79 /* Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		94630370290559990013319F /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				943A9EAB29049E2D008196BB /* LoginViewController.swift */,
+				94630371290559C90013319F /* RegistrationViewController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +279,9 @@
 				94334DA728E73ADC004487E7 /* Extension.swift in Sources */,
 				9429B99C29039BB60042AC79 /* Extensions.swift in Sources */,
 				94334DA528E73742004487E7 /* HomeController.swift in Sources */,
+				94630372290559C90013319F /* RegistrationViewController.swift in Sources */,
 				941193E928E6FFA900B78D74 /* ViewController.swift in Sources */,
+				943A9EAC29049E2D008196BB /* LoginViewController.swift in Sources */,
 				941193E528E6FFA900B78D74 /* AppDelegate.swift in Sources */,
 				9429B99E29039E4C0042AC79 /* ConversationController.swift in Sources */,
 				941193E728E6FFA900B78D74 /* SceneDelegate.swift in Sources */,
