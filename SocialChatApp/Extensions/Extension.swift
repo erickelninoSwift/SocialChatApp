@@ -17,7 +17,7 @@ extension UIViewController
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
         let layerGradient = CAGradientLayer()
-        layerGradient.colors = [UIColor.systemPurple.cgColor,UIColor.systemRed.cgColor]
+        layerGradient.colors = [UIColor.systemPink.cgColor,UIColor.systemRed.cgColor]
         layerGradient.locations = [0,1]
         view.layer.addSublayer(layerGradient)
         layerGradient.frame = view.frame

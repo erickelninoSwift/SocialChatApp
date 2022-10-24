@@ -6,4 +6,17 @@
 //  Copyright © 2022 Erick El nino. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class emailTextfield: UIView
+{
+    
+    
+    override init(frame: CGRect) {
+        super.init(frame: .zero)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
