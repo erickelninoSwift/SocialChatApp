@@ -25,6 +25,8 @@ class RegistrationViewController: UIViewController
         button.setImage(UIImage(named: "plus_photo"), for: .normal)
         button.tintColor = .white
         button.setDimensions(height: 200, width: 200)
+        button.clipsToBounds = true
+        button.imageView?.contentMode = .scaleAspectFill
         return button
     }()
     
@@ -182,13 +184,29 @@ class RegistrationViewController: UIViewController
     
     @objc func hanglesignup()
     {
-        
+    
         print("DEBUG: SIGNUP")
     }
     
     @objc func handlePhotoplus()
     {
-        print("DEBUG: PHOTO PLUS")
+        let imagepickerController = UIImagePickerController()
+        imagepickerController.delegate = self
+        self.present(imagepickerController, animated: true, completion: nil)
     }
+    
 }
 
+extension RegistrationViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate
+{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.originalImage] as? UIImage else {return}
+        
+        photoaddPlusButton.setImage(image.withRenderingMode(.alwaysOriginal), for: .normal)
+        photoaddPlusButton.layer.borderColor = UIColor.white.cgColor
+        photoaddPlusButton.layer.borderWidth = 2
+        photoaddPlusButton.layer.cornerRadius = 200 / 2
+       
+        self.dismiss(animated: true, completion: nil)
+    }
+}
