@@ -8,7 +8,8 @@ target 'SocialChatApp' do
   # Pods for SocialChatApp
 	
 	pod 'Firebase/Auth'
-        pod 'Firebase/Firestore'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
 	pod 'SDWebImage','~>4.4.2'
 	pod 'JGProgressHUD','~>2.0.3'
 

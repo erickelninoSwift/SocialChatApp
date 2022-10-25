@@ -24,6 +24,7 @@
 		943D94992905EB86008E4916 /* buttonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943D94982905EB86008E4916 /* buttonText.swift */; };
 		94630372290559C90013319F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94630371290559C90013319F /* RegistrationViewController.swift */; };
 		9463037829057D220013319F /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463037729057D220013319F /* CustomTextfield.swift */; };
+		9463D7232907FB9800B51120 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463D7222907FB9800B51120 /* APICaller.swift */; };
 		94C84E432905901D006BD5CD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C84E422905901D006BD5CD /* CustomButton.swift */; };
 		FD91C4BBFFAF53F82865FAB2 /* Pods_SocialChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D197BEF333866D66FE9678 /* Pods_SocialChatApp.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		943D94982905EB86008E4916 /* buttonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonText.swift; sourceTree = "<group>"; };
 		94630371290559C90013319F /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		9463037729057D220013319F /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
+		9463D7222907FB9800B51120 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		94C84E422905901D006BD5CD /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A3D6B59BF269BF0131FAE043 /* Pods-SocialChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChatApp.debug.xcconfig"; path = "Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B4AE0E9D102CB1C87BBA8519 /* Pods-SocialChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChatApp.release.xcconfig"; path = "Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		94334DA228E736CD004487E7 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				9463D7222907FB9800B51120 /* APICaller.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				943D94992905EB86008E4916 /* buttonText.swift in Sources */,
 				941193E528E6FFA900B78D74 /* AppDelegate.swift in Sources */,
 				9429B99E29039E4C0042AC79 /* ConversationController.swift in Sources */,
+				9463D7232907FB9800B51120 /* APICaller.swift in Sources */,
 				941193E728E6FFA900B78D74 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

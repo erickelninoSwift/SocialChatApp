@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
+
 
 class RegistrationViewController: UIViewController
 {
     
     private var viewModel = regisrtionValidation()
+    
+    private var ProfileImage: UIImage?
     
     var emailuser = UITextField()
     var usernameuser = UITextField()
@@ -162,7 +167,7 @@ class RegistrationViewController: UIViewController
         if viewModel.formisValid
         {
             Signup.isEnabled = true
-            Signup.backgroundColor  = .systemBackground
+            Signup.backgroundColor  = .black
         }else
         {
             Signup.isEnabled = false
@@ -173,7 +178,7 @@ class RegistrationViewController: UIViewController
     func handleButtonSignupview()
     {
         signUpButtonPressed.addTarget(self, action: #selector(handleLoginView), for: .touchUpInside)
-        Signup.addTarget(self, action: #selector(hanglesignup), for: .touchUpInside)
+        Signup.addTarget(self, action: #selector(mySignUpHandles), for: .touchUpInside)
         photoaddPlusButton.addTarget(self, action: #selector(handlePhotoplus), for: .touchUpInside)
     }
     
@@ -182,10 +187,39 @@ class RegistrationViewController: UIViewController
         navigationController?.popToRootViewController(animated: true)
     }
     
-    @objc func hanglesignup()
+    @objc func mySignUpHandles()
     {
-    
-        print("DEBUG: SIGNUP")
+        guard let email = emailuser.text else {return}
+        guard let fullname = fullnameuser.text else {return}
+        guard let username = usernameuser.text else {return}
+        guard let password = passworduser.text else {return}
+        guard let myprofileImage = ProfileImage else {return}
+        guard let imagetoSave = myprofileImage.jpegData(compressionQuality:0.4) else {return}
+        
+        let fileName = NSUUID().uuidString
+        
+        let storageImagePath = Storage.storage().reference(withPath: "/profile_images/\(fileName)")
+        
+        storageImagePath.putData(imagetoSave, metadata: nil) { (meta, Error) in
+        
+            if let error  = Error
+            {
+                print("DEBUG: Image could not be save with error \(error.localizedDescription)")
+            }else
+            {
+                
+                storageImagePath.downloadURL { (url, error) in
+                    if error != nil
+                    {
+                        print("There was an error while trying to reteive file URL with error \(error!.localizedDescription)")
+                    }else
+                    {
+                        guard let imageDownloadURL = url?.absoluteString else {return}
+                        APICaller.shared.registerUSer(email: email, password: password, imageURL: imageDownloadURL, fullname: fullname, username: username)
+                    }
+                }
+            }
+        }
     }
     
     @objc func handlePhotoplus()
@@ -201,7 +235,7 @@ extension RegistrationViewController: UIImagePickerControllerDelegate, UINavigat
 {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.originalImage] as? UIImage else {return}
-        
+        ProfileImage = image
         photoaddPlusButton.setImage(image.withRenderingMode(.alwaysOriginal), for: .normal)
         photoaddPlusButton.layer.borderColor = UIColor.white.cgColor
         photoaddPlusButton.layer.borderWidth = 2
