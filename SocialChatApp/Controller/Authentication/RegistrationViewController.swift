@@ -7,7 +7,9 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseCore
+import FirebaseAuth
+import FirebaseFirestore
 import FirebaseStorage
 
 
@@ -189,12 +191,13 @@ class RegistrationViewController: UIViewController
     
     @objc func mySignUpHandles()
     {
+        print("SignUP button is working")
         guard let email = emailuser.text else {return}
         guard let fullname = fullnameuser.text else {return}
         guard let username = usernameuser.text else {return}
         guard let password = passworduser.text else {return}
         guard let myprofileImage = ProfileImage else {return}
-        guard let imagetoSave = myprofileImage.jpegData(compressionQuality:0.4) else {return}
+        guard let imagetoSave = myprofileImage.jpegData(compressionQuality:0.3) else {return}
         
         let fileName = NSUUID().uuidString
         
@@ -204,10 +207,10 @@ class RegistrationViewController: UIViewController
         
             if let error  = Error
             {
-                print("DEBUG: Image could not be save with error \(error.localizedDescription)")
+                print("DEBUG: Image could not be save with error \(error)")
             }else
             {
-                
+    
                 storageImagePath.downloadURL { (url, error) in
                     if error != nil
                     {

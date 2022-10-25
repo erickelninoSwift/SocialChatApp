@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,12 +19,12 @@
 		9429B99E29039E4C0042AC79 /* ConversationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B99D29039E4C0042AC79 /* ConversationController.swift */; };
 		94334DA528E73742004487E7 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94334DA428E73742004487E7 /* HomeController.swift */; };
 		94334DA728E73ADC004487E7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94334DA628E73ADC004487E7 /* Extension.swift */; };
-		94373E4028E731DD00F6D3DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94373E3F28E731DD00F6D3DE /* GoogleService-Info.plist */; };
 		943A9EAC29049E2D008196BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943A9EAB29049E2D008196BB /* LoginViewController.swift */; };
 		943D94992905EB86008E4916 /* buttonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943D94982905EB86008E4916 /* buttonText.swift */; };
 		94630372290559C90013319F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94630371290559C90013319F /* RegistrationViewController.swift */; };
 		9463037829057D220013319F /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463037729057D220013319F /* CustomTextfield.swift */; };
 		9463D7232907FB9800B51120 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463D7222907FB9800B51120 /* APICaller.swift */; };
+		94BB2628290863F8000D38B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94BB2627290863F8000D38B5 /* GoogleService-Info.plist */; };
 		94C84E432905901D006BD5CD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C84E422905901D006BD5CD /* CustomButton.swift */; };
 		FD91C4BBFFAF53F82865FAB2 /* Pods_SocialChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D197BEF333866D66FE9678 /* Pods_SocialChatApp.framework */; };
 /* End PBXBuildFile section */
@@ -44,12 +44,12 @@
 		9429B99D29039E4C0042AC79 /* ConversationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationController.swift; sourceTree = "<group>"; };
 		94334DA428E73742004487E7 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		94334DA628E73ADC004487E7 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		94373E3F28E731DD00F6D3DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		943A9EAB29049E2D008196BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		943D94982905EB86008E4916 /* buttonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonText.swift; sourceTree = "<group>"; };
 		94630371290559C90013319F /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		9463037729057D220013319F /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
 		9463D7222907FB9800B51120 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		94BB2627290863F8000D38B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/Assets.xcassets/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94C84E422905901D006BD5CD /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A3D6B59BF269BF0131FAE043 /* Pods-SocialChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChatApp.debug.xcconfig"; path = "Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B4AE0E9D102CB1C87BBA8519 /* Pods-SocialChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChatApp.release.xcconfig"; path = "Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 				941193EA28E6FFA900B78D74 /* Main.storyboard */,
 				941193ED28E6FFB100B78D74 /* Assets.xcassets */,
 				941193EF28E6FFB100B78D74 /* LaunchScreen.storyboard */,
-				94373E3F28E731DD00F6D3DE /* GoogleService-Info.plist */,
+				94BB2627290863F8000D38B5 /* GoogleService-Info.plist */,
 				941193F228E6FFB100B78D74 /* Info.plist */,
 			);
 			path = SocialChatApp;
@@ -205,7 +205,7 @@
 				941193DD28E6FFA900B78D74 /* Sources */,
 				941193DE28E6FFA900B78D74 /* Frameworks */,
 				941193DF28E6FFA900B78D74 /* Resources */,
-				3E3498DD1A29D9C957D3F227 /* [CP] Embed Pods Frameworks */,
+				8B575B824F4C63370AF6BBE1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,7 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				941193F128E6FFB100B78D74 /* LaunchScreen.storyboard in Resources */,
-				94373E4028E731DD00F6D3DE /* GoogleService-Info.plist in Resources */,
+				94BB2628290863F8000D38B5 /* GoogleService-Info.plist in Resources */,
 				941193EE28E6FFB100B78D74 /* Assets.xcassets in Resources */,
 				941193EC28E6FFA900B78D74 /* Main.storyboard in Resources */,
 			);
@@ -264,7 +264,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3E3498DD1A29D9C957D3F227 /* [CP] Embed Pods Frameworks */ = {
+		8B575B824F4C63370AF6BBE1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

@@ -6,9 +6,11 @@
 //  Copyright © 2022 Erick El nino. All rights reserved.
 //
 
-import Foundation
 import UIKit
-import Firebase
+import FirebaseCore
+import FirebaseAuth
+import FirebaseFirestore
+import FirebaseCoreInternal
 
 class APICaller
 {
