@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 
 class ConversationController: UIViewController
@@ -25,8 +26,10 @@ class ConversationController: UIViewController
         configureUIView()
         chatTableView.delegate = self
         chatTableView.dataSource = self
+        checkifuserloggedIn()
         view.addSubview(chatTableView)
         chatTableView.tableFooterView = UIView()
+        view.backgroundColor = .white
     }
     
     
@@ -47,6 +50,41 @@ class ConversationController: UIViewController
     @objc func handleProfile()
     {
         print("DEBUG: HABDLE PROFILE")
+        logout()
+    }
+    
+    
+    @objc func handleLogin()
+    {
+        print("DEBUG: LOGOUT")
+    }
+    
+    func logout()
+    {
+        do
+        {
+            try Auth.auth().signOut()
+        }catch
+        {
+            print("DEBUG: there was an error while loggin Out")
+        }
+    }
+    
+    
+    func checkifuserloggedIn()
+    {
+        if Auth.auth().currentUser?.uid == nil
+        {
+            print("DEBUG: USER IS NOT LOGGED IN")
+            DispatchQueue.main.async {
+                let loginviewcontroller = LoginViewController()
+                loginviewcontroller.modalPresentationStyle = .fullScreen
+                self.navigationController?.present(loginviewcontroller, animated: true, completion: nil)
+            }
+        }else
+        {
+            print("DEBUG USER IS ALREADY LOGGED IN ")
+        }
     }
 }
 
@@ -58,7 +96,7 @@ extension ConversationController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:ConversationController.CELL_IDENTIFIER, for: indexPath)
-       
+        cell.textLabel?.text = " cell test"
         return cell
     }
     

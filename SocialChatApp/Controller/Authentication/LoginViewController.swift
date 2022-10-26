@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import FirebaseCore
-import FirebaseAuth
+import Firebase
+
 class LoginViewController: UIViewController
 {
     //    MARK: - Properties

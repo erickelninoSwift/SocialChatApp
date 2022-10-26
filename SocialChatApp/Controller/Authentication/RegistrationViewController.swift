@@ -7,16 +7,14 @@
 //
 
 import UIKit
-import FirebaseCore
-import FirebaseAuth
-import FirebaseFirestore
-import FirebaseStorage
-
+import Firebase
 
 class RegistrationViewController: UIViewController
 {
     
     private var viewModel = regisrtionValidation()
+    
+   
     
     private var ProfileImage: UIImage?
     
@@ -191,35 +189,48 @@ class RegistrationViewController: UIViewController
     
     @objc func mySignUpHandles()
     {
-        print("SignUP button is working")
-        guard let email = emailuser.text else {return}
-        guard let fullname = fullnameuser.text else {return}
-        guard let username = usernameuser.text else {return}
+    
+      
+        guard let email = emailuser.text?.lowercased() else {return}
+        guard let fullname = fullnameuser.text?.lowercased() else {return}
+        guard let username = usernameuser.text?.lowercased() else {return}
         guard let password = passworduser.text else {return}
         guard let myprofileImage = ProfileImage else {return}
-        guard let imagetoSave = myprofileImage.jpegData(compressionQuality:0.3) else {return}
+        guard let imagetoSave = myprofileImage.jpegData(compressionQuality: 0.4) else {return}
         
+        
+        let storageImagePath = Storage.storage().reference()
         let fileName = NSUUID().uuidString
         
-        let storageImagePath = Storage.storage().reference(withPath: "/profile_images/\(fileName)")
+        let filelocation = storageImagePath.child("profile_images/\(fileName)")
         
-        storageImagePath.putData(imagetoSave, metadata: nil) { (meta, Error) in
+          filelocation.putData(imagetoSave, metadata: nil) { (meta, Error) in
         
             if let error  = Error
             {
-                print("DEBUG: Image could not be save with error \(error)")
+                print("DEBUG: Image could not be save with error \(error.localizedDescription)")
             }else
             {
     
-                storageImagePath.downloadURL { (url, error) in
+                 filelocation.downloadURL { (url, error) in
                     if error != nil
                     {
                         print("There was an error while trying to reteive file URL with error \(error!.localizedDescription)")
                     }else
                     {
                         guard let imageDownloadURL = url?.absoluteString else {return}
+                          print("Image URL \(imageDownloadURL)")
                         APICaller.shared.registerUSer(email: email, password: password, imageURL: imageDownloadURL, fullname: fullname, username: username)
+                      
                     }
+                    
+                    self.emailuser.text = ""
+                    self.usernameuser.text = ""
+                    self.passworduser.text = ""
+                    self.fullnameuser.text = ""
+                    self.photoaddPlusButton.setImage(UIImage(named: "plus_photo"), for: .normal)
+                    self.photoaddPlusButton.setDimensions(height: 200, width: 200)
+                    self.photoaddPlusButton.clipsToBounds = true
                 }
             }
         }
@@ -227,9 +238,10 @@ class RegistrationViewController: UIViewController
     
     @objc func handlePhotoplus()
     {
-        let imagepickerController = UIImagePickerController()
-        imagepickerController.delegate = self
-        self.present(imagepickerController, animated: true, completion: nil)
+        let picker = UIImagePickerController()
+        picker.allowsEditing = true
+        picker.delegate = self
+        self.present(picker, animated: true, completion: nil)
     }
     
 }

@@ -11,5 +11,6 @@ target 'SocialChatApp' do
   pod 'FirebaseFirestore'
   pod 'SDWebImage','~>4.4.2'
   pod 'FirebaseStorage'
+  pod 'Firebase/Storage'
 
 end

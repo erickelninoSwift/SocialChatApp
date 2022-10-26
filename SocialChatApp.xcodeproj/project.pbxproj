@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,10 +21,10 @@
 		94334DA728E73ADC004487E7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94334DA628E73ADC004487E7 /* Extension.swift */; };
 		943A9EAC29049E2D008196BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943A9EAB29049E2D008196BB /* LoginViewController.swift */; };
 		943D94992905EB86008E4916 /* buttonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943D94982905EB86008E4916 /* buttonText.swift */; };
+		94522BA82909A3250009CD23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94522BA72909A3250009CD23 /* GoogleService-Info.plist */; };
 		94630372290559C90013319F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94630371290559C90013319F /* RegistrationViewController.swift */; };
 		9463037829057D220013319F /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463037729057D220013319F /* CustomTextfield.swift */; };
 		9463D7232907FB9800B51120 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463D7222907FB9800B51120 /* APICaller.swift */; };
-		94BB2628290863F8000D38B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94BB2627290863F8000D38B5 /* GoogleService-Info.plist */; };
 		94C84E432905901D006BD5CD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C84E422905901D006BD5CD /* CustomButton.swift */; };
 		FD91C4BBFFAF53F82865FAB2 /* Pods_SocialChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D197BEF333866D66FE9678 /* Pods_SocialChatApp.framework */; };
 /* End PBXBuildFile section */
@@ -46,10 +46,10 @@
 		94334DA628E73ADC004487E7 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		943A9EAB29049E2D008196BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		943D94982905EB86008E4916 /* buttonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonText.swift; sourceTree = "<group>"; };
+		94522BA72909A3250009CD23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/Assets.xcassets/plus_photo.imageset/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94630371290559C90013319F /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		9463037729057D220013319F /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
 		9463D7222907FB9800B51120 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
-		94BB2627290863F8000D38B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/Assets.xcassets/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94C84E422905901D006BD5CD /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		A3D6B59BF269BF0131FAE043 /* Pods-SocialChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChatApp.debug.xcconfig"; path = "Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B4AE0E9D102CB1C87BBA8519 /* Pods-SocialChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChatApp.release.xcconfig"; path = "Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,12 +112,13 @@
 				94334DA028E736B9004487E7 /* View */,
 				94334D9F28E736B0004487E7 /* Controller */,
 				941193E428E6FFA900B78D74 /* AppDelegate.swift */,
+				94522BA72909A3250009CD23 /* GoogleService-Info.plist */,
 				941193E628E6FFA900B78D74 /* SceneDelegate.swift */,
+				94522BA62909A3100009CD23 /* New Group */,
 				941193E828E6FFA900B78D74 /* ViewController.swift */,
 				941193EA28E6FFA900B78D74 /* Main.storyboard */,
 				941193ED28E6FFB100B78D74 /* Assets.xcassets */,
 				941193EF28E6FFB100B78D74 /* LaunchScreen.storyboard */,
-				94BB2627290863F8000D38B5 /* GoogleService-Info.plist */,
 				941193F228E6FFB100B78D74 /* Info.plist */,
 			);
 			path = SocialChatApp;
@@ -165,6 +166,13 @@
 				9429B99B29039BB50042AC79 /* Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		94522BA62909A3100009CD23 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		94630370290559990013319F /* Authentication */ = {
@@ -255,7 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				941193F128E6FFB100B78D74 /* LaunchScreen.storyboard in Resources */,
-				94BB2628290863F8000D38B5 /* GoogleService-Info.plist in Resources */,
+				94522BA82909A3250009CD23 /* GoogleService-Info.plist in Resources */,
 				941193EE28E6FFB100B78D74 /* Assets.xcassets in Resources */,
 				941193EC28E6FFA900B78D74 /* Main.storyboard in Resources */,
 			);

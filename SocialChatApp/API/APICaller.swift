@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import FirebaseCore
-import FirebaseAuth
-import FirebaseFirestore
-import FirebaseCoreInternal
+import Firebase
+
 
 class APICaller
 {
@@ -41,6 +39,7 @@ class APICaller
                         print("DEBUG: Did Create users")
                     }
                 }
+                
             }
         }
     }
