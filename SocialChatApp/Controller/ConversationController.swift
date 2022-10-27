@@ -64,6 +64,11 @@ class ConversationController: UIViewController
         do
         {
             try Auth.auth().signOut()
+                DispatchQueue.main.async {
+                let loginviewcontroller = LoginViewController()
+                loginviewcontroller.modalPresentationStyle = .fullScreen
+                self.present(loginviewcontroller, animated: true, completion: nil)
+            }
         }catch
         {
             print("DEBUG: there was an error while loggin Out")
@@ -79,7 +84,9 @@ class ConversationController: UIViewController
             DispatchQueue.main.async {
                 let loginviewcontroller = LoginViewController()
                 loginviewcontroller.modalPresentationStyle = .fullScreen
-                self.navigationController?.present(loginviewcontroller, animated: true, completion: nil)
+                self.present(loginviewcontroller, animated: true, completion: nil)
+                
+              
             }
         }else
         {

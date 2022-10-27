@@ -18,7 +18,7 @@ class LoginViewController: UIViewController
     
     private var ViewModel = FromValidation()
     
-     let logoImage: UIImageView =
+    let logoImage: UIImageView =
     {
         let logo = UIImageView()
         logo.translatesAutoresizingMaskIntoConstraints = false
@@ -30,31 +30,31 @@ class LoginViewController: UIViewController
     }()
     
     
-     lazy var emailContainerView: UIView =
-    {
-        let emailtextField = myCustomTextField(identifier: "Email")
-        let view = CustomTextfield(Image: UIImage(systemName: "envelope.fill") ?? UIImage(), myemailField: emailtextField)
-        emailtextField.addTarget(self, action: #selector(editingChange), for: .editingChanged)
-        myemailtextfield = emailtextField
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.setHeight(height: 50)
-        return view
+    lazy var emailContainerView: UIView =
+        {
+            let emailtextField = myCustomTextField(identifier: "Email")
+            let view = CustomTextfield(Image: UIImage(systemName: "envelope.fill") ?? UIImage(), myemailField: emailtextField)
+            emailtextField.addTarget(self, action: #selector(editingChange), for: .editingChanged)
+            myemailtextfield = emailtextField
+            view.translatesAutoresizingMaskIntoConstraints = false
+            view.setHeight(height: 50)
+            return view
     }()
     
     
-     lazy var passwordContainerView: UIView =
-    {
-        let passwordfield = myCustomTextField(identifier: "Password")
-        let view = CustomTextfield(Image: UIImage(systemName: "lock.fill") ?? UIImage(),myemailField: passwordfield)
-        passwordfield.addTarget(self, action: #selector(editingChange), for: .editingChanged)
-        mypasswordTextfield = passwordfield
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.setHeight(height: 50)
-        return view
+    lazy var passwordContainerView: UIView =
+        {
+            let passwordfield = myCustomTextField(identifier: "Password")
+            let view = CustomTextfield(Image: UIImage(systemName: "lock.fill") ?? UIImage(),myemailField: passwordfield)
+            passwordfield.addTarget(self, action: #selector(editingChange), for: .editingChanged)
+            mypasswordTextfield = passwordfield
+            view.translatesAutoresizingMaskIntoConstraints = false
+            view.setHeight(height: 50)
+            return view
     }()
     
     
-     let loginButton: UIButton =
+    let loginButton: UIButton =
     {
         let button = CustomButton(titleButton: "Log In", backgrouncColor: UIColor.systemRed)
         return button
@@ -62,7 +62,7 @@ class LoginViewController: UIViewController
     
     
     
-     let signUpButtonPressed: UIButton =
+    let signUpButtonPressed: UIButton =
     {
         let button = buttonText(firsttext: "Don't have an account? ", secondText: "Sign Up")
         
@@ -119,7 +119,7 @@ class LoginViewController: UIViewController
         if textfield == myemailtextfield
         {
             ViewModel.email = textfield.text
-        
+            
         }else
         {
             ViewModel.password = textfield.text
@@ -157,11 +157,16 @@ class LoginViewController: UIViewController
     
     @objc func handleLoginButton()
     {
-        print("DEBUG: LOGIN PRESSED")
+        guard let emailaddress = myemailtextfield.text else {return}
+        guard let passworduser = mypasswordTextfield.text else {return}
+        
+        APICaller.shared.login(emailadress: emailaddress, password: passworduser, with: self)
     }
     
     @objc func handleSignupbutton()
     {
-        navigationController?.pushViewController(RegistrationViewController(), animated: true)
+        let controller = RegistrationViewController()
+        controller.modalPresentationStyle = .fullScreen
+        self.present(controller, animated: true, completion: nil)
     }
 }

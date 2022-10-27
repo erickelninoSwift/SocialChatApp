@@ -180,60 +180,44 @@ class RegistrationViewController: UIViewController
         signUpButtonPressed.addTarget(self, action: #selector(handleLoginView), for: .touchUpInside)
         Signup.addTarget(self, action: #selector(mySignUpHandles), for: .touchUpInside)
         photoaddPlusButton.addTarget(self, action: #selector(handlePhotoplus), for: .touchUpInside)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardwillshow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardwillhide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+//    Keyboard going up and down 
+    @objc func keyboardwillshow()
+    {
+        if view.frame.origin.y == 0
+        {
+            view.frame.origin.y -= 88
+        }
+    }
+    
+    @objc func keyboardwillhide()
+    {
+        if view.frame.origin.y != 0
+        {
+            view.frame.origin.y = 0
+        }
     }
     
     @objc func handleLoginView()
     {
-        navigationController?.popToRootViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func mySignUpHandles()
     {
-    
-      
         guard let email = emailuser.text?.lowercased() else {return}
         guard let fullname = fullnameuser.text?.lowercased() else {return}
         guard let username = usernameuser.text?.lowercased() else {return}
         guard let password = passworduser.text else {return}
         guard let myprofileImage = ProfileImage else {return}
-        guard let imagetoSave = myprofileImage.jpegData(compressionQuality: 0.4) else {return}
+        let currentuserData = userCredentials(email: email, password: password, username: username, fullname: fullname, profilepicImage: myprofileImage)
         
+        APICaller.shared.registrationUser(currentUser: currentuserData, CurrentViewController: self)
         
-        let storageImagePath = Storage.storage().reference()
-        let fileName = NSUUID().uuidString
-        
-        let filelocation = storageImagePath.child("profile_images/\(fileName)")
-        
-          filelocation.putData(imagetoSave, metadata: nil) { (meta, Error) in
-        
-            if let error  = Error
-            {
-                print("DEBUG: Image could not be save with error \(error.localizedDescription)")
-            }else
-            {
-    
-                 filelocation.downloadURL { (url, error) in
-                    if error != nil
-                    {
-                        print("There was an error while trying to reteive file URL with error \(error!.localizedDescription)")
-                    }else
-                    {
-                        guard let imageDownloadURL = url?.absoluteString else {return}
-                          print("Image URL \(imageDownloadURL)")
-                        APICaller.shared.registerUSer(email: email, password: password, imageURL: imageDownloadURL, fullname: fullname, username: username)
-                      
-                    }
-                    
-                    self.emailuser.text = ""
-                    self.usernameuser.text = ""
-                    self.passworduser.text = ""
-                    self.fullnameuser.text = ""
-                    self.photoaddPlusButton.setImage(UIImage(named: "plus_photo"), for: .normal)
-                    self.photoaddPlusButton.setDimensions(height: 200, width: 200)
-                    self.photoaddPlusButton.clipsToBounds = true
-                }
-            }
-        }
     }
     
     @objc func handlePhotoplus()
@@ -259,3 +243,42 @@ extension RegistrationViewController: UIImagePickerControllerDelegate, UINavigat
         self.dismiss(animated: true, completion: nil)
     }
 }
+
+//guard let imagetoSave = myprofileImage.jpegData(compressionQuality: 0.4) else {return}
+//
+//
+//    let storageImagePath = Storage.storage().reference()
+//    let fileName = NSUUID().uuidString
+//
+//    let filelocation = storageImagePath.child("profile_images/\(fileName)")
+//
+//      filelocation.putData(imagetoSave, metadata: nil) { (meta, Error) in
+//
+//        if let error  = Error
+//        {
+//            print("DEBUG: Image could not be save with error \(error.localizedDescription)")
+//        }else
+//        {
+//
+//             filelocation.downloadURL { (url, error) in
+//                if error != nil
+//                {
+//                    print("There was an error while trying to reteive file URL with error \(error!.localizedDescription)")
+//                }else
+//                {
+//                    guard let imageDownloadURL = url?.absoluteString else {return}
+//                      print("Image URL \(imageDownloadURL)")
+//                    APICaller.shared.registerUSer(email: email, password: password, imageURL: imageDownloadURL, fullname: fullname, username: username , Controller: self)
+//
+//                }
+//
+//                self.emailuser.text = ""
+//                self.usernameuser.text = ""
+//                self.passworduser.text = ""
+//                self.fullnameuser.text = ""
+//                self.photoaddPlusButton.setImage(UIImage(named: "plus_photo"), for: .normal)
+//                self.photoaddPlusButton.setDimensions(height: 200, width: 200)
+//                self.photoaddPlusButton.clipsToBounds = true
+//            }
+//        }
+//    }
