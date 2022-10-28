@@ -8,9 +8,18 @@
 
 import UIKit
 
+protocol  selectedUsertochatwith: AnyObject {
+    
+    func ChosenUsertochatwith(UserselectedViewcontroller: NewMessageViewController , selectedUser: User)
+}
+
 class NewMessageViewController: UITableViewController
 {
      let identifier = "NEW_MESSAGE_CELL"
+    
+    
+    weak var delegate:selectedUsertochatwith?
+    
     
     private var Allmyusers = [User]()
     
@@ -69,6 +78,7 @@ extension NewMessageViewController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print(indexPath.row)
+        
+        delegate?.ChosenUsertochatwith(UserselectedViewcontroller: self, selectedUser: Allmyusers[indexPath.row])
     }
 }

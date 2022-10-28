@@ -53,6 +53,7 @@ class ConversationController: UIViewController
     {
         print("DEBUG: ADD NEW MESSAGE§")
         let controller = NewMessageViewController()
+        controller.delegate  = self
         let navigation = UINavigationController(rootViewController: controller)
         navigation.modalPresentationStyle = .fullScreen
         self.present(navigation, animated: true, completion: nil)
@@ -148,4 +149,15 @@ extension ConversationController: UITableViewDelegate, UITableViewDataSource
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+}
+
+//MARK:- Start conversation with user selected
+
+extension ConversationController: selectedUsertochatwith
+{
+    func ChosenUsertochatwith(UserselectedViewcontroller: NewMessageViewController, selectedUser: User) {
+        UserselectedViewcontroller.dismiss(animated: true, completion: nil)
+        let chat = ChatController(user: selectedUser)
+        navigationController?.pushViewController(chat, animated: true)
+    }
 }
