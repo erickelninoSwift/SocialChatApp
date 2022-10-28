@@ -21,7 +21,11 @@
 		94334DA728E73ADC004487E7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94334DA628E73ADC004487E7 /* Extension.swift */; };
 		943A9EAC29049E2D008196BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943A9EAB29049E2D008196BB /* LoginViewController.swift */; };
 		943D94992905EB86008E4916 /* buttonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943D94982905EB86008E4916 /* buttonText.swift */; };
+		944AAA16290B65AF003B58BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944AAA15290B65AF003B58BE /* User.swift */; };
+		944AAA18290B671A003B58BE /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944AAA17290B671A003B58BE /* Services.swift */; };
 		94522BA82909A3250009CD23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94522BA72909A3250009CD23 /* GoogleService-Info.plist */; };
+		945A29E4290B0190001BEFF8 /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945A29E3290B0190001BEFF8 /* NewMessageViewController.swift */; };
+		945A29E9290B20F7001BEFF8 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945A29E8290B20F7001BEFF8 /* UserCell.swift */; };
 		94630372290559C90013319F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94630371290559C90013319F /* RegistrationViewController.swift */; };
 		9463037829057D220013319F /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463037729057D220013319F /* CustomTextfield.swift */; };
 		9463D7232907FB9800B51120 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463D7222907FB9800B51120 /* APICaller.swift */; };
@@ -46,7 +50,11 @@
 		94334DA628E73ADC004487E7 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		943A9EAB29049E2D008196BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		943D94982905EB86008E4916 /* buttonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonText.swift; sourceTree = "<group>"; };
+		944AAA15290B65AF003B58BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		944AAA17290B671A003B58BE /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		94522BA72909A3250009CD23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/Assets.xcassets/plus_photo.imageset/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		945A29E3290B0190001BEFF8 /* NewMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewController.swift; sourceTree = "<group>"; };
+		945A29E8290B20F7001BEFF8 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		94630371290559C90013319F /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		9463037729057D220013319F /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
 		9463D7222907FB9800B51120 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
@@ -127,6 +135,7 @@
 		94334D9F28E736B0004487E7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				945A29E2290B005D001BEFF8 /* MessageViewcontroller */,
 				94630370290559990013319F /* Authentication */,
 				94334DA428E73742004487E7 /* HomeController.swift */,
 				9429B99D29039E4C0042AC79 /* ConversationController.swift */,
@@ -137,6 +146,7 @@
 		94334DA028E736B9004487E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				945A29E5290B0991001BEFF8 /* MessageCell */,
 				94630374290567EB0013319F /* Textfields */,
 				94630373290567DC0013319F /* Buttons */,
 			);
@@ -146,6 +156,7 @@
 		94334DA128E736C0004487E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				944AAA14290B6554003B58BE /* User */,
 				940B97A42906B68D007390F8 /* FromValidation.swift */,
 			);
 			path = Model;
@@ -155,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				9463D7222907FB9800B51120 /* APICaller.swift */,
+				944AAA17290B671A003B58BE /* Services.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -168,11 +180,35 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		944AAA14290B6554003B58BE /* User */ = {
+			isa = PBXGroup;
+			children = (
+				944AAA15290B65AF003B58BE /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		94522BA62909A3100009CD23 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		945A29E2290B005D001BEFF8 /* MessageViewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				945A29E3290B0190001BEFF8 /* NewMessageViewController.swift */,
+			);
+			path = MessageViewcontroller;
+			sourceTree = "<group>";
+		};
+		945A29E5290B0991001BEFF8 /* MessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				945A29E8290B20F7001BEFF8 /* UserCell.swift */,
+			);
+			path = MessageCell;
 			sourceTree = "<group>";
 		};
 		94630370290559990013319F /* Authentication */ = {
@@ -322,14 +358,18 @@
 				9463037829057D220013319F /* CustomTextfield.swift in Sources */,
 				940B97A52906B68D007390F8 /* FromValidation.swift in Sources */,
 				94334DA728E73ADC004487E7 /* Extension.swift in Sources */,
+				945A29E9290B20F7001BEFF8 /* UserCell.swift in Sources */,
 				9429B99C29039BB60042AC79 /* Extensions.swift in Sources */,
 				94334DA528E73742004487E7 /* HomeController.swift in Sources */,
 				94630372290559C90013319F /* RegistrationViewController.swift in Sources */,
+				945A29E4290B0190001BEFF8 /* NewMessageViewController.swift in Sources */,
 				941193E928E6FFA900B78D74 /* ViewController.swift in Sources */,
 				943A9EAC29049E2D008196BB /* LoginViewController.swift in Sources */,
 				94C84E432905901D006BD5CD /* CustomButton.swift in Sources */,
 				943D94992905EB86008E4916 /* buttonText.swift in Sources */,
+				944AAA18290B671A003B58BE /* Services.swift in Sources */,
 				941193E528E6FFA900B78D74 /* AppDelegate.swift in Sources */,
+				944AAA16290B65AF003B58BE /* User.swift in Sources */,
 				9429B99E29039E4C0042AC79 /* ConversationController.swift in Sources */,
 				9463D7232907FB9800B51120 /* APICaller.swift in Sources */,
 				941193E728E6FFA900B78D74 /* SceneDelegate.swift in Sources */,

@@ -21,6 +21,21 @@ class ConversationController: UIViewController
         return tableview
     }()
     
+    fileprivate let newMessageButton: UIButton =
+    {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(systemName: "plus"), for: .normal)
+        button.backgroundColor = .systemBlue
+        button.tintColor = .white
+        button.setDimensions(height: 55, width: 55)
+        button.layer.cornerRadius = 55 / 2
+        
+        button.addTarget(self, action: #selector(handleNewmessage), for: .touchUpInside)
+        
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUIView()
@@ -28,10 +43,27 @@ class ConversationController: UIViewController
         chatTableView.dataSource = self
         checkifuserloggedIn()
         view.addSubview(chatTableView)
+        configureViewProgrammatically()
         chatTableView.tableFooterView = UIView()
         view.backgroundColor = .white
     }
     
+    
+    @objc func handleNewmessage()
+    {
+        print("DEBUG: ADD NEW MESSAGE§")
+        let controller = NewMessageViewController()
+        let navigation = UINavigationController(rootViewController: controller)
+        navigation.modalPresentationStyle = .fullScreen
+        self.present(navigation, animated: true, completion: nil)
+    }
+    
+    func configureViewProgrammatically()
+    {
+        view.addSubview(newMessageButton)
+        newMessageButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor , constant: -20).isActive = true
+        newMessageButton.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -10).isActive = true
+    }
     
     
     
