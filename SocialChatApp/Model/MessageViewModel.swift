@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 
 struct MessageViewModel
 {
@@ -39,6 +39,11 @@ struct MessageViewModel
         return message.isfromCurrentUser
     }
 
+    var profileImageURL: URL?
+    {
+        guard let urlString = message.user?.profileImageUrl  else {return nil}
+        return URL(string: urlString)
+    }
     
     
     init(myMessage: Message) {

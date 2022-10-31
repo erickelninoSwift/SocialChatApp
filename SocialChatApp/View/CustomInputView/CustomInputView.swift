@@ -91,11 +91,13 @@ class CustomInputView: UIView
     {
         guard let messagetosend = messageInputtextview.text else {return}
         delegate?.sendbuttonCustomView(currentView: self, messagesent: messagetosend)
-        checkshit()
+         messageInputtextview.text = ""
+         checkshit()
     }
     
     func checkshit()
     {
+       
         placeholder.isHidden = !messageInputtextview.text.isEmpty
     }
 }

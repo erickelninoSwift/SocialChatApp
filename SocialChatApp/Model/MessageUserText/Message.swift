@@ -21,10 +21,16 @@ struct Message
     
     init(userdata: [String:Any]) {
         
-        self.text = userdata["message"] as? String ?? ""
+        self.text = userdata["text"] as? String ?? ""
         self.toID = userdata["toId"] as? String ?? ""
         self.fromID = userdata["fromId"] as? String ?? ""
         self.time = userdata["timestamp"] as? Timestamp ?? Timestamp(date: Date())
         self.isfromCurrentUser = fromID == Auth.auth().currentUser?.uid
     }
+}
+
+struct ConversationMessage
+{
+    let user: User
+    let message: Message
 }

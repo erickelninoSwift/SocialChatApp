@@ -14,7 +14,7 @@ class ChatController: UICollectionViewController
 {
     //    MARK:- Properties
     
-    private let user: User
+    let user: User
     private var userMessage = [Message]()
     
     var isCurrentUser: Bool = false
@@ -49,6 +49,8 @@ class ChatController: UICollectionViewController
         configureCollectionUI()
         collectionView.register(UserMessageCell.self, forCellWithReuseIdentifier: resuableIdentifier)
         collectionView.alwaysBounceVertical = true
+        retreiveMessage()
+        collectionView.keyboardDismissMode = .interactive
     }
     
     
@@ -79,7 +81,7 @@ extension ChatController
         guard let cell  = collectionView.dequeueReusableCell(withReuseIdentifier:resuableIdentifier , for: indexPath) as? UserMessageCell
             else { return UICollectionViewCell()}
         cell.myMessage = userMessage[indexPath.row]
-        cell.configure()
+        cell.myUser = user
         return cell
     }
 }
@@ -89,7 +91,18 @@ extension ChatController
 extension ChatController: UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 50)
+        
+//         create a dummycell
+        let frame  = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
+        let estimatedCell = UserMessageCell(frame: frame)
+        estimatedCell.myMessage = userMessage[indexPath.row]
+        estimatedCell.layoutIfNeeded()
+        
+//
+        let targetSize = CGSize(width: view.frame.width, height: 1000)
+        let estimatedSize = estimatedCell.systemLayoutSizeFitting(targetSize)
+        
+        return .init(width: view.frame.width, height: estimatedSize.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -108,11 +121,28 @@ extension ChatController: CustominputViewDelgate
                 
             }else
             {
-                currentView.messageInputtextview.text = ""
                 currentView.checkshit()
                 self.collectionView.reloadData()
             }
         }
         
+    }
+    
+    
+    func retreiveMessage()
+    {
+        print(user)
+        Services.shared.retreiveMessagesFromDatabase(forUser: user) { Result in
+            switch Result
+            {
+            case .success(let Messages):
+                self.userMessage = Messages
+                print(Messages)
+                self.collectionView.reloadData()
+                self.collectionView.scrollToItem(at: [0 , self.userMessage.count - 1], at: .bottom, animated: true)
+            case .failure(let Error):
+                print("There was an error while fetching data \(Error.localizedDescription)")
+            }
+        }
     }
 }

@@ -12,6 +12,12 @@ class UserMessageCell: UICollectionViewCell
 {
     
 //     MARK: - properties
+    var myUser: User?
+    {
+        didSet{
+            setUser()
+        }
+    }
     
     var myMessage: Message?
     {
@@ -27,7 +33,6 @@ class UserMessageCell: UICollectionViewCell
         let Imageprofile = UIImageView()
         Imageprofile.clipsToBounds = true
         Imageprofile.contentMode = .scaleAspectFill
-        Imageprofile.backgroundColor = .lightGray
         return Imageprofile
     }()
     
@@ -112,6 +117,12 @@ class UserMessageCell: UICollectionViewCell
         profileImage.isHidden = myviewmodelMessage.shouldHidprofileImage
         messageInputtextview.textColor = myviewmodelMessage.messageTetxColor
         messageInputtextview.text = currentMessage.text
-        
+        profileImage.sd_setImage(with: myviewmodelMessage.profileImageURL)
+    }
+    
+    func setUser()
+    {
+        guard let profileImagesURl = URL(string: myUser?.profileImageUrl ?? "") else {return}
+        profileImage.sd_setImage(with: profileImagesURl, completed: nil)
     }
 }

@@ -14,6 +14,8 @@ class ConversationController: UIViewController
 {
     static let CELL_IDENTIFIER = "ConversationController"
     
+    private var conversation = [ConversationMessage]()
+    
     fileprivate var chatTableView: UITableView =
     {
         let tableview = UITableView()
@@ -38,6 +40,7 @@ class ConversationController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchAllconversation()
         configureUIView()
         chatTableView.delegate = self
         chatTableView.dataSource = self
@@ -126,17 +129,20 @@ class ConversationController: UIViewController
             print("DEBUG USER IS ALREADY LOGGED IN ")
         }
     }
+    
+    
+   
 }
 
 extension ConversationController: UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return conversation.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:ConversationController.CELL_IDENTIFIER, for: indexPath)
-        cell.textLabel?.text = " cell test"
+        cell.textLabel?.text = conversation[indexPath.row].message.text
         return cell
     }
     
@@ -147,7 +153,24 @@ extension ConversationController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let userSelected = conversation[indexPath.row].user
+        let controller = ChatController(user: userSelected)
+        navigationController?.pushViewController(controller, animated: true)
     }
+    
+    func fetchAllconversation()
+       {
+           Services.shared.getCurrentUserInteraction { Result in
+               switch Result
+               {
+               case .success(let Allconversations):
+                   self.conversation = Allconversations
+                   self.chatTableView.reloadData()
+               case .failure(let error):
+                   print(error)
+               }
+           }
+       }
     
 }
 
