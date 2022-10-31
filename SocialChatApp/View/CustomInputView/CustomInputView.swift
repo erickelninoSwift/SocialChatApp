@@ -8,17 +8,24 @@
 
 import UIKit
 
+protocol  CustominputViewDelgate: AnyObject {
+    func sendbuttonCustomView(currentView:CustomInputView, messagesent: String)
+}
+
 class CustomInputView: UIView
 {
 //    MARK: = Properties
     
-    private let messageInputtextview: UITextView =
+    weak var delegate : CustominputViewDelgate?
+    
+    let messageInputtextview: UITextView =
     {
         let tv = UITextView()
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.font = UIFont.systemFont(ofSize: 16)
         tv.isScrollEnabled = false
         tv.setHeight(height: 30)
+        tv.textColor = .systemGray
         return tv
     }()
     
@@ -28,7 +35,7 @@ class CustomInputView: UIView
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("send", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
-        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitleColor(.systemRed, for: .normal)
         button.addTarget(self, action: #selector(handlesendMessages), for: .touchUpInside)
         return button
     }()
@@ -76,19 +83,19 @@ class CustomInputView: UIView
     
     @objc func handletextfieldDidchange()
     {
-//        if !messageInputtextview.text.isEmpty || messageInputtextview.text!.count > 0
-//        {
-//            placeholder.alpha = 0
-//        }else
-//        {
-//            placeholder.alpha = 1
-//        }
-        placeholder.isHidden = !messageInputtextview.text.isEmpty
+      checkshit()
     }
     
     
     @objc func handlesendMessages()
     {
-        print("DEBUG: sending message")
+        guard let messagetosend = messageInputtextview.text else {return}
+        delegate?.sendbuttonCustomView(currentView: self, messagesent: messagetosend)
+        checkshit()
+    }
+    
+    func checkshit()
+    {
+        placeholder.isHidden = !messageInputtextview.text.isEmpty
     }
 }

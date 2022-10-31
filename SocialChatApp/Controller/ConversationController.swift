@@ -26,7 +26,7 @@ class ConversationController: UIViewController
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "plus"), for: .normal)
-        button.backgroundColor = .systemBlue
+        button.backgroundColor = .systemRed
         button.tintColor = .white
         button.setDimensions(height: 55, width: 55)
         button.layer.cornerRadius = 55 / 2
@@ -76,7 +76,7 @@ class ConversationController: UIViewController
     func configureUIView()
     {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.crop.circle"), style:.plain, target: self, action: #selector(handleProfile))
-        configurationHeaderTitleView(title: "Messages", mybackgroundColor: .systemBlue)
+        configurationHeaderTitleView(title: "Messages", mybackgroundColor: .systemRed)
         
     }
     

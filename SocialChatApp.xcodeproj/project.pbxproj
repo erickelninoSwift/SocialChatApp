@@ -32,6 +32,9 @@
 		94C84E432905901D006BD5CD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C84E422905901D006BD5CD /* CustomButton.swift */; };
 		94EA5C9C290C6310004B7937 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA5C9B290C6310004B7937 /* ChatController.swift */; };
 		94EA5CA0290C7C42004B7937 /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA5C9F290C7C42004B7937 /* CustomInputView.swift */; };
+		94EA5CA2290C9830004B7937 /* UserMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA5CA1290C9830004B7937 /* UserMessageCell.swift */; };
+		94EA5CA5290E020B004B7937 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA5CA4290E020B004B7937 /* Message.swift */; };
+		94EA5CA7290EC5E1004B7937 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA5CA6290EC5E1004B7937 /* MessageViewModel.swift */; };
 		FD91C4BBFFAF53F82865FAB2 /* Pods_SocialChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D197BEF333866D66FE9678 /* Pods_SocialChatApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +66,9 @@
 		94C84E422905901D006BD5CD /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		94EA5C9B290C6310004B7937 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		94EA5C9F290C7C42004B7937 /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
+		94EA5CA1290C9830004B7937 /* UserMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessageCell.swift; sourceTree = "<group>"; };
+		94EA5CA4290E020B004B7937 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		94EA5CA6290EC5E1004B7937 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		A3D6B59BF269BF0131FAE043 /* Pods-SocialChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChatApp.debug.xcconfig"; path = "Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B4AE0E9D102CB1C87BBA8519 /* Pods-SocialChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialChatApp.release.xcconfig"; path = "Target Support Files/Pods-SocialChatApp/Pods-SocialChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		D9D197BEF333866D66FE9678 /* Pods_SocialChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,8 +168,10 @@
 		94334DA128E736C0004487E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				94EA5CA3290E01EB004B7937 /* MessageUserText */,
 				944AAA14290B6554003B58BE /* User */,
 				940B97A42906B68D007390F8 /* FromValidation.swift */,
+				94EA5CA6290EC5E1004B7937 /* MessageViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				945A29E8290B20F7001BEFF8 /* UserCell.swift */,
+				94EA5CA1290C9830004B7937 /* UserMessageCell.swift */,
 			);
 			path = MessageCell;
 			sourceTree = "<group>";
@@ -258,6 +267,14 @@
 				94EA5C9F290C7C42004B7937 /* CustomInputView.swift */,
 			);
 			path = CustomInputView;
+			sourceTree = "<group>";
+		};
+		94EA5CA3290E01EB004B7937 /* MessageUserText */ = {
+			isa = PBXGroup;
+			children = (
+				94EA5CA4290E020B004B7937 /* Message.swift */,
+			);
+			path = MessageUserText;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,6 +397,7 @@
 				9463037829057D220013319F /* CustomTextfield.swift in Sources */,
 				940B97A52906B68D007390F8 /* FromValidation.swift in Sources */,
 				94EA5C9C290C6310004B7937 /* ChatController.swift in Sources */,
+				94EA5CA7290EC5E1004B7937 /* MessageViewModel.swift in Sources */,
 				94334DA728E73ADC004487E7 /* Extension.swift in Sources */,
 				945A29E9290B20F7001BEFF8 /* UserCell.swift in Sources */,
 				9429B99C29039BB60042AC79 /* Extensions.swift in Sources */,
@@ -390,8 +408,10 @@
 				943A9EAC29049E2D008196BB /* LoginViewController.swift in Sources */,
 				94C84E432905901D006BD5CD /* CustomButton.swift in Sources */,
 				943D94992905EB86008E4916 /* buttonText.swift in Sources */,
+				94EA5CA2290C9830004B7937 /* UserMessageCell.swift in Sources */,
 				944AAA18290B671A003B58BE /* Services.swift in Sources */,
 				941193E528E6FFA900B78D74 /* AppDelegate.swift in Sources */,
+				94EA5CA5290E020B004B7937 /* Message.swift in Sources */,
 				944AAA16290B65AF003B58BE /* User.swift in Sources */,
 				9429B99E29039E4C0042AC79 /* ConversationController.swift in Sources */,
 				9463D7232907FB9800B51120 /* APICaller.swift in Sources */,

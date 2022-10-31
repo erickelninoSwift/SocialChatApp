@@ -37,4 +37,21 @@ class Services
         }
     }
     
+    
+    func uploadMessage(message: String , toUser: User, completion: ((Error?) -> Void)?)
+    {
+        guard let currentUserid = Auth.auth().currentUser?.uid else {return}
+        
+        let data = ["text": message , "toId": toUser.uuid ,"fromId": currentUserid, "timestamp": Timestamp(date: Date())] as [String : Any]
+        
+        Firestore.firestore().collection("Messages").document(currentUserid).collection(toUser.uuid).addDocument(data: data) { _ in
+            
+            Firestore.firestore().collection("Messages").document(toUser.uuid).collection(currentUserid).addDocument(data: data) { _ in
+                
+                print("MESSAGE SENT")
+            }
+        }
+        
+    }
+    
 }
