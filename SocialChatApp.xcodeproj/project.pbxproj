@@ -31,6 +31,7 @@
 		9463D7232907FB9800B51120 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463D7222907FB9800B51120 /* APICaller.swift */; };
 		948920A3291019BE0030CBD3 /* AuthenticationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948920A2291019BE0030CBD3 /* AuthenticationServices.swift */; };
 		949900AE2910584000C0F5F3 /* ConversationuserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949900AD2910584000C0F5F3 /* ConversationuserCell.swift */; };
+		949900B12910972800C0F5F3 /* ProfileVoewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949900B02910972800C0F5F3 /* ProfileVoewController.swift */; };
 		94C84E432905901D006BD5CD /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C84E422905901D006BD5CD /* CustomButton.swift */; };
 		94EA5C9C290C6310004B7937 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA5C9B290C6310004B7937 /* ChatController.swift */; };
 		94EA5CA0290C7C42004B7937 /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EA5C9F290C7C42004B7937 /* CustomInputView.swift */; };
@@ -67,6 +68,7 @@
 		9463D7222907FB9800B51120 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		948920A2291019BE0030CBD3 /* AuthenticationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServices.swift; sourceTree = "<group>"; };
 		949900AD2910584000C0F5F3 /* ConversationuserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationuserCell.swift; sourceTree = "<group>"; };
+		949900B02910972800C0F5F3 /* ProfileVoewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVoewController.swift; sourceTree = "<group>"; };
 		94C84E422905901D006BD5CD /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		94EA5C9B290C6310004B7937 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		94EA5C9F290C7C42004B7937 /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		94334D9F28E736B0004487E7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				949900AF291096F800C0F5F3 /* ProfileController */,
 				94EA5C9D290C6413004B7937 /* Conversation */,
 				945A29E2290B005D001BEFF8 /* MessageViewcontroller */,
 				94630370290559990013319F /* Authentication */,
@@ -265,6 +268,14 @@
 				949900AD2910584000C0F5F3 /* ConversationuserCell.swift */,
 			);
 			path = ConversationCell;
+			sourceTree = "<group>";
+		};
+		949900AF291096F800C0F5F3 /* ProfileController */ = {
+			isa = PBXGroup;
+			children = (
+				949900B02910972800C0F5F3 /* ProfileVoewController.swift */,
+			);
+			path = ProfileController;
 			sourceTree = "<group>";
 		};
 		94EA5C9D290C6413004B7937 /* Conversation */ = {
@@ -431,6 +442,7 @@
 				944AAA16290B65AF003B58BE /* User.swift in Sources */,
 				9429B99E29039E4C0042AC79 /* ConversationController.swift in Sources */,
 				9463D7232907FB9800B51120 /* APICaller.swift in Sources */,
+				949900B12910972800C0F5F3 /* ProfileVoewController.swift in Sources */,
 				941193E728E6FFA900B78D74 /* SceneDelegate.swift in Sources */,
 				94EA5CA0290C7C42004B7937 /* CustomInputView.swift in Sources */,
 			);

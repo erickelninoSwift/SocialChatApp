@@ -19,7 +19,7 @@ class ConversationController: UIViewController
     fileprivate var chatTableView: UITableView =
     {
         let tableview = UITableView()
-        tableview.register(UITableViewCell.self, forCellReuseIdentifier: CELL_IDENTIFIER)
+        tableview.register(ConversationuserCell.self, forCellReuseIdentifier: CELL_IDENTIFIER)
         return tableview
     }()
     
@@ -49,6 +49,12 @@ class ConversationController: UIViewController
         configureViewProgrammatically()
         chatTableView.tableFooterView = UIView()
         view.backgroundColor = .white
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        configureNavigationBar(withTitle: "Messages", prefersLargeTitles: true)
     }
     
     
@@ -141,8 +147,11 @@ extension ConversationController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier:ConversationController.CELL_IDENTIFIER, for: indexPath)
-        cell.textLabel?.text = conversation[indexPath.row].message.text
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ConversationController.CELL_IDENTIFIER, for: indexPath) as? ConversationuserCell
+            else {return UITableViewCell()}
+        
+        cell.conversation = conversation[indexPath.row]
+        
         return cell
     }
     
