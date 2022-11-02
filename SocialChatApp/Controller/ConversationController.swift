@@ -92,7 +92,10 @@ class ConversationController: UIViewController
     @objc func handleProfile()
     {
         print("DEBUG: HABDLE PROFILE")
-        logout()
+        let profileContoller = ProfileViewwController(style: .insetGrouped)
+        let navigation = UINavigationController(rootViewController: profileContoller)
+        navigation.modalPresentationStyle = .fullScreen
+        self.present(navigation, animated: true, completion: nil)
     }
     
     

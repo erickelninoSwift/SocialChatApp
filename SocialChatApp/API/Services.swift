@@ -56,7 +56,7 @@ class Services
         
     }
     
-    
+                                                                                                                                                                
     func retreiveMessagesFromDatabase(forUser: User,completion: @escaping(Result<[Message],Error>) -> Void)
     {
         
@@ -84,8 +84,6 @@ class Services
                 }
             })
         }
-        
-
     }
     
     
