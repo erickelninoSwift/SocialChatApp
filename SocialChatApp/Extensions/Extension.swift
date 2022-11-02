@@ -45,4 +45,21 @@ extension UIViewController
         
     }
     
+    
+    func myAlertAction(message: String, buttonAction: String , mydelegate:handlelogoutDelegate?, viewController: ProfileViewwController)
+       {
+           let alert  = UIAlertController(title: nil, message: message, preferredStyle: .actionSheet)
+           alert.addAction(UIAlertAction(title: buttonAction, style: .destructive, handler: { (_) in
+               
+               viewController.dismiss(animated: true) {
+                   
+                   mydelegate?.logoutbuttonDelegate()
+               }
+           }))
+           alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+           
+           viewController.present(alert, animated: true, completion: nil)
+           
+       }
+    
 }

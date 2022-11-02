@@ -9,9 +9,16 @@
 import UIKit
 import Firebase
 
+protocol handlelogoutDelegate: AnyObject{
+    
+    func logoutbuttonDelegate()
+}
+
 class ProfileViewwController: UITableViewController
 {
     
+    
+    weak var delegate:handlelogoutDelegate?
     
     private let CELL_ID_PROFILE = "ProfileViewwController"
     //    MARK: - properties
@@ -42,7 +49,7 @@ class ProfileViewwController: UITableViewController
         tableView.tableHeaderView = headerView
         tableView.register(ProfileCell.self, forCellReuseIdentifier: CELL_ID_PROFILE)
         tableView.tableFooterView = footView
-
+        
     }
     
     
@@ -71,7 +78,12 @@ extension ProfileViewwController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+        guard let viewmodel = ProfileHeadeViewModel(rawValue: indexPath.row) else {return}
+        switch viewmodel
+        {
+        case .useracoountInfo: print("DEBUG: PRESENT ACCOUNT")
+        case .settings: print("DEBUG PRESENT SETTING")
+        }
     }
     
     func fetchuserinfo()
@@ -81,7 +93,6 @@ extension ProfileViewwController
             self.headerView.currentUser = User
         }
     }
-   
 }
 
 extension ProfileViewwController
@@ -106,15 +117,10 @@ extension ProfileViewwController: profileheaderViewDelegateaction
 extension ProfileViewwController: dimisprofileViewDelegate
 {
     func dimsisslogout() {
-        do
-        {
-            try Auth.auth().signOut()
-            let controller = LoginViewController()
-            controller.modalPresentationStyle = .fullScreen
-            self.present(controller, animated: true, completion: nil)
-        }catch
-        {
-            print("DEBUG: there was an erro while trying to singout")
-        }
+      
+        let message1 = "Are you sure you want to Log out?"
+        let buttoonMessage = "Log out"
+        myAlertAction(message: message1, buttonAction: buttoonMessage, mydelegate: self.delegate, viewController: self)
     }
 }
+

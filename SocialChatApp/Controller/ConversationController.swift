@@ -93,6 +93,7 @@ class ConversationController: UIViewController
     {
         print("DEBUG: HABDLE PROFILE")
         let profileContoller = ProfileViewwController(style: .insetGrouped)
+        profileContoller.delegate = self
         let navigation = UINavigationController(rootViewController: profileContoller)
         navigation.modalPresentationStyle = .fullScreen
         self.present(navigation, animated: true, completion: nil)
@@ -109,11 +110,11 @@ class ConversationController: UIViewController
         do
         {
             try Auth.auth().signOut()
-                DispatchQueue.main.async {
+                
                 let loginviewcontroller = LoginViewController()
                 loginviewcontroller.modalPresentationStyle = .fullScreen
                 self.present(loginviewcontroller, animated: true, completion: nil)
-            }
+        
         }catch
         {
             print("DEBUG: there was an error while loggin Out")
@@ -194,5 +195,15 @@ extension ConversationController: selectedUsertochatwith
         UserselectedViewcontroller.dismiss(animated: true, completion: nil)
         let chat = ChatController(user: selectedUser)
         navigationController?.pushViewController(chat, animated: true)
+    }
+}
+
+
+// Handle logout
+
+extension ConversationController: handlelogoutDelegate
+{
+    func logoutbuttonDelegate() {
+        self.logout()
     }
 }
