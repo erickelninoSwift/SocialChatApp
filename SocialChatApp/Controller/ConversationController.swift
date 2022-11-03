@@ -192,7 +192,8 @@ extension ConversationController: UITableViewDelegate, UITableViewDataSource
 extension ConversationController: selectedUsertochatwith
 {
     func ChosenUsertochatwith(UserselectedViewcontroller: NewMessageViewController, selectedUser: User) {
-        UserselectedViewcontroller.dismiss(animated: true, completion: nil)
+        
+        self.dismiss(animated: true, completion: nil)
         let chat = ChatController(user: selectedUser)
         navigationController?.pushViewController(chat, animated: true)
     }
